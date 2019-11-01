@@ -88,6 +88,8 @@ Gráfica tu serie de tiempo, recuerda poner, título principal, y a los ejes.
 plot(EG, xlab = "Tiempo", ylab = "Unidades", lty = c(1,2),
      main ="Ventas anuales de ciertos equipos grandes",cex.main=1.5, col= "darkturquoise")
 ```
+(https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104)
+
 ```markdown
 
 ```
