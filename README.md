@@ -90,6 +90,185 @@ plot(EG, xlab = "Tiempo", ylab = "Unidades", lty = c(1,2),
 ```
 image (https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104)
 
+De la gráfica anterior observas, ¿Cuál es su tendencia?
+
+```markdown
+Tendencia= "creciente"
+  print(Tendencia)
+```
+```markdown
+[1] "creciente"
+```
+Tiene periodicidad, muy evidente
+```markdown
+Periodicidad= TRUE
+  print(Periodicidad)
+```
+```markdown
+[1] TRUE
+```
+Para verificar tus suposiciones realiza una gráfica con la descomposición del modelo 
+Periodicidad+Tendencia+Aleatoriedad
+```markdown
+X= ts(EG,start=(1982), frequency = 12)
+plot(decompose(X))
+```
+
+Sí tu base abarca, realiza una gráfica de caja para cada mes identificando valores atípicos
+Si sólo tiene un registro por año realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
+Sí tu base tiene menos de dos años de información realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
+
+```markdown
+boxplot(X, main="Diagrama de cajas", col= "mediumspringgreen")
+```
+es anual o menos de dos años de información
+MesesOutlier=c("anual")
+```markdown
+MesesOutlier= c("anual")
+  NumeroOutlier= c (1)
+  Outlier=data.frame(MesesOutlier, NumeroOutlier)
+print(Outlier)
+```
+```markdown
+ MesesOutlier NumeroOutlier
+1        anual             1
+```
+Realiza el correlograma de tu serie de tiempo
+```markdown
+acf(X, main= "Correlograma de EG")
+```
+
+Del correlograma anterior pudes asumir que las observaciones son correlacionadas entre si con un 95% de confianza
+```markdown
+Correlacion= TRUE
+  print(Correlacion)
+```
+```markdown
+[1] TRUE
+```
+Descomponer la serie de tiempo en el modelo aditivo y realice gráfica.
+```markdown
+eg1.decom = decompose(X, type = "additive")
+plot(eg1.decom)
+```
+CUal es la estimación para la Tendencia estimada
+```markdown
+TendenciaEstimadaAditivo=  eg1.decom$trend
+  print(TendenciaEstimadaAditivo)
+```
+```markdown
+  Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
+1982       NA       NA       NA       NA       NA       NA 116.1124 120.7725
+1983 137.4793 138.4474 138.5727 139.9820 145.1567 153.4589       NA       NA
+          Sep      Oct      Nov      Dec
+1982 124.6625 127.5964 131.1420 134.9367
+1983       NA       NA       NA       NA
+```
+CUal es la estacionalidad (periodicidad) estimada:
+```markdown
+EstacionalidadEstimadaAditiva= eg1.decom$seasonal
+  print(EstacionalidadEstimadaAditiva)
+```
+```markdown
+Jan        Feb        Mar        Apr        May        Jun        Jul
+1982 -14.215201  -4.759285   5.575382  17.734132  35.537465  26.031215  25.881715
+1983 -14.215201  -4.759285   5.575382  17.734132  35.537465  26.031215  25.881715
+            Aug        Sep        Oct        Nov        Dec
+1982  15.831632   2.409632 -29.272285 -46.025868 -34.728535
+1983  15.831632   2.409632 -29.272285 -46.025868 -34.728535
+```
+Cuál es el error estimado?:
+```markdown
+ErrorEstimadoAditivo= eg1.decom$random
+  print(ErrorEstimadoAditivo)
+```
+```markdown
+ Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
+1982       NA       NA       NA       NA       NA       NA 2.607868 2.607868
+1983 2.607868 2.607868 2.607868 2.607868 2.607868 2.607868       NA       NA
+          Sep      Oct      Nov      Dec
+1982 2.607868 2.607868 2.607868 2.607868
+1983       NA       NA       NA       NA
+```
+Sume la tendencia con la estacionalidad,
+```markdown
+AditivoModel1= (TendenciaEstimadaAditivo + EstacionalidadEstimadaAditiva)
+  print(AditivoModel1)
+```
+```markdown
+Jan       Feb       Mar       Apr       May       Jun       Jul
+1982        NA        NA        NA        NA        NA        NA 141.99413
+1983 123.26413 133.68813 144.14813 157.71613 180.69413 179.49013        NA
+           Aug       Sep       Oct       Nov       Dec
+1982 136.60413 127.07213  98.32413  85.11613 100.20813
+1983        NA        NA        NA        NA        NA
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
 ```markdown
 
 ```
