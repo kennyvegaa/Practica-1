@@ -203,56 +203,97 @@ Jan       Feb       Mar       Apr       May       Jun       Jul
 1982 136.60413 127.07213  98.32413  85.11613 100.20813
 1983        NA        NA        NA        NA        NA
 ```
+Gráfique la serie de tiempo y sobre la misma gráfica imprima la suma de tendencia con estacionalidad
 ```markdown
-
+plot(X,AditivoModel1, col=c(2,4))
+```
+Los Valores son parecidos: TRUE (Sí), FALSE (No)
+```markdown
+ParecidosAditivo="TRUE"
+  print(ParecidosAditivo) 
 ```
 ```markdown
+[1] "TRUE"
+```
+Descomponer la serie de tiempo en el modelo máltiplicativo y realice gráfica.
+```markdown
+eg.decom = decompose(X, type = "mult")
+plot(eg.decom)
+```
+CUal es la estimación para la Tendencia estimada
 
+```markdown
+TendenciaEstimadaMultiplicativo= eg.decom$trend
+  print(TendenciaEstimadaMultiplicativo)
 ```
 ```markdown
-
+Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
+1982       NA       NA       NA       NA       NA       NA 116.1124 120.7725
+1983 137.4793 138.4474 138.5727 139.9820 145.1567 153.4589       NA       NA
+          Sep      Oct      Nov      Dec
+1982 124.6625 127.5964 131.1420 134.9367
+1983       NA       NA       NA       NA
+```
+CUal es la estacionalidad (periodicidad) estimada:
+```markdown
+EstacionalidadEstimadaMultipicativo= eg.decom$seasonal
+  print(EstacionalidadEstimadaMultipicativo)
 ```
 ```markdown
-
+ Jan       Feb       Mar       Apr       May       Jun       Jul
+1982 0.8995279 0.9672109 1.0404973 1.1252507 1.2406610 1.1658320 1.2235411
+1983 0.8995279 0.9672109 1.0404973 1.1252507 1.2406610 1.1658320 1.2235411
+           Aug       Sep       Oct       Nov       Dec
+1982 1.1324826 1.0220217 0.7771652 0.6572030 0.7486066
+1983 1.1324826 1.0220217 0.7771652 0.6572030 0.7486066
+```
+Cuál es el error estimado?:
+```markdown
+ErrorEstimadoMultiplicativo= eg.decom$random
+  print(ErrorEstimadoMultiplicativo)
 ```
 ```markdown
-
+Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
+1982       NA       NA       NA       NA       NA       NA 1.017834 1.017834
+1983 1.017834 1.017834 1.017834 1.017834 1.017834 1.017834       NA       NA
+          Sep      Oct      Nov      Dec
+1982 1.017834 1.017834 1.017834 1.017834
+1983       NA       NA       NA       NA
+```
+Multiplique la tendencia con la estacionalidad,
+```markdown
+MultiplicativoModel1= (TendenciaEstimadaMultiplicativo)* (EstacionalidadEstimadaMultipicativo)
+  print(MultiplicativoModel1)
 ```
 ```markdown
-
+Jan       Feb       Mar       Apr       May       Jun       Jul
+1982        NA        NA        NA        NA        NA        NA 142.06831
+1983 123.66650 133.90785 144.18457 157.51484 180.09022 178.90732        NA
+           Aug       Sep       Oct       Nov       Dec
+1982 136.77276 127.40777  99.16349  86.18692 101.01448
+1983        NA        NA        NA        NA        NA
+```
+Gráfique la serie de tiempo y sobre la misma gráfica imprima la multiplicacion de tendencia con estacionalidad
+```markdown
+plot(X,MultiplicativoModel1, col=c(3,5))
+```
+Los Valores son parecidos: TRUE (Sí), FALSE (No)
+```markdown
+ParecidosMultiplicativo="TRUE"
+print(ParecidosMultiplicativo)
 ```
 ```markdown
-
+[1] "TRUE"
 ```
+Realiza el modelo de Holt Winters usando la el modelo multiplicativo
 ```markdown
-
+HoltWinters= HoltWinters(X, seasonal="mult")
+  plot(HoltWinters)
 ```
+COn el mismo modelo obten una predicción de 5 años posteriores a tus datos
 ```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
+HoltWintersPredict=predict(HoltWinters,n.ahead=5)
+  ts.plot(X, HoltWintersPredict, lty=1:2)
 ```
 ```markdown
 
