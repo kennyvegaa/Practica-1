@@ -43,6 +43,108 @@ Frequency = 1
 [23,] 178.144
 [24,] 211.650
 ```
+De la series de datos que obtuviste, cuál es la clase de tu serie de tiempo
+```markdown
+Clase= class(EG)
+print(Clase)
+```
+```markdown
+[1] "ts"
+```
+Identifica la frecuencia de registro de tus datos a través de una función de R
+```markdown
+Frecuencia= frequency(EG)
+  print(Frecuencia)
+```
+```markdown
+[1] 1
+```
+Con la función anterior escribe la frecuencia de los datos en palabras
+```markdown
+FrecuenciaLetra= "anual"
+  print(FrecuenciaLetra)
+```
+```markdown
+[1] "anual"
+```
+Identifica el año y mes/día/trimestre en el que la serie de datos comienza a registrarse 
+```markdown
+Inicio=start(EG)
+  print(Inicio)
+```
+```markdown
+[1] 1982    1
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+```markdown
+
+```
+
 # Header 1
 ## Header 2
 ### Header 3
