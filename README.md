@@ -2,13 +2,10 @@
 
 Primero cargamos la siguiente paqueteria:
 
-### Markdown
-
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
-
 ```markdown
-Syntax highlighted code block
-
+install.packages("TSA")
+library(TSA)
+```
 # Header 1
 ## Header 2
 ### Header 3
