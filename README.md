@@ -75,14 +75,18 @@ Inicio=start(EG)
 ```markdown
 [1] 1982    1
 ```
+Identifica el año y mes/día/trimestre en el que la serie de datos términa a registrarse 
 ```markdown
-
+Final= end(EG)
+  print(Final)
 ```
 ```markdown
-
+[1] 2005    1
 ```
+Gráfica tu serie de tiempo, recuerda poner, título principal, y a los ejes.
 ```markdown
-
+plot(EG, xlab = "Tiempo", ylab = "Unidades", lty = c(1,2),
+     main ="Ventas anuales de ciertos equipos grandes",cex.main=1.5, col= "darkturquoise")
 ```
 ```markdown
 
