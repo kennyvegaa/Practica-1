@@ -6,6 +6,12 @@ Primero cargamos la siguiente paqueteria:
 install.packages("TSA")
 library(TSA)
 ```
+Ahora leemos los datos
+```markdown
+data(units)
+EG=units
+EG
+```
 # Header 1
 ## Header 2
 ### Header 3
