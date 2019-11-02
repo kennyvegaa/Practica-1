@@ -286,8 +286,9 @@ Jan       Feb       Mar       Apr       May       Jun       Jul
 ```
 Gráfique la serie de tiempo y sobre la misma gráfica imprima la multiplicacion de tendencia con estacionalidad
 ```markdown
-plot(X,MultiplicativoModel1, col=c(3,5))
+plot(X,MultiplicativoModel1, col=c(("turquoise4","limegreen"))
 ```
+
 Los Valores son parecidos: TRUE (Sí), FALSE (No)
 ```markdown
 ParecidosMultiplicativo="TRUE"
