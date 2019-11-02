@@ -89,7 +89,7 @@ plot(EG, xlab = "Tiempo", ylab = "Unidades", lty = c(1,2),
      main ="Ventas anuales de ciertos equipos grandes",cex.main=1.5, col= "darkturquoise")
 ```
 ![i need a screenshot](https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104)
-
+![https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104].(src)
 <img src="https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104" />
 
 De la gráfica anterior observas, ¿Cuál es su tendencia?
@@ -101,7 +101,7 @@ Tendencia= "creciente"
 ```markdown
 [1] "creciente"
 ```
-Tiene periodicidad, muy evidente
+¿Tiene periodicidad, muy evidente?
 ```markdown
 Periodicidad= TRUE
   print(Periodicidad)
@@ -115,10 +115,7 @@ Periodicidad+Tendencia+Aleatoriedad
 X= ts(EG,start=(1982), frequency = 12)
 plot(decompose(X))
 ```
-
-Sí tu base abarca, realiza una gráfica de caja para cada mes identificando valores atípicos
-Si sólo tiene un registro por año realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
-Sí tu base tiene menos de dos años de información realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
+Sí tu base abarca, realiza una gráfica de caja para cada mes identificando valores atípicos, si sólo tiene un registro por año realiza una gráfica de caja con todos los datos identificando outlier (atípicos) y sí tu base tiene menos de dos años de información realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
 
 ```markdown
 boxplot(X, main="Diagrama de cajas", col= "mediumspringgreen")
@@ -139,8 +136,7 @@ Realiza el correlograma de tu serie de tiempo
 ```markdown
 acf(X, main= "Correlograma de EG")
 ```
-
-Del correlograma anterior pudes asumir que las observaciones son correlacionadas entre si con un 95% de confianza
+¿Del correlograma anterior pudes asumir que las observaciones son correlacionadas entre si con un 95% de confianza?
 ```markdown
 Correlacion= TRUE
   print(Correlacion)
@@ -153,7 +149,7 @@ Descomponer la serie de tiempo en el modelo aditivo y realice gráfica.
 eg1.decom = decompose(X, type = "additive")
 plot(eg1.decom)
 ```
-CUal es la estimación para la Tendencia estimada
+¿Cuál es la estimación para la Tendencia estimada?
 ```markdown
 TendenciaEstimadaAditivo=  eg1.decom$trend
   print(TendenciaEstimadaAditivo)
@@ -166,7 +162,7 @@ TendenciaEstimadaAditivo=  eg1.decom$trend
 1982 124.6625 127.5964 131.1420 134.9367
 1983       NA       NA       NA       NA
 ```
-CUal es la estacionalidad (periodicidad) estimada:
+¿Cuál es la estacionalidad (periodicidad) estimada?
 ```markdown
 EstacionalidadEstimadaAditiva= eg1.decom$seasonal
   print(EstacionalidadEstimadaAditiva)
@@ -179,7 +175,7 @@ Jan        Feb        Mar        Apr        May        Jun        Jul
 1982  15.831632   2.409632 -29.272285 -46.025868 -34.728535
 1983  15.831632   2.409632 -29.272285 -46.025868 -34.728535
 ```
-Cuál es el error estimado?:
+¿Cuál es el error estimado?
 ```markdown
 ErrorEstimadoAditivo= eg1.decom$random
   print(ErrorEstimadoAditivo)
@@ -192,7 +188,7 @@ ErrorEstimadoAditivo= eg1.decom$random
 1982 2.607868 2.607868 2.607868 2.607868
 1983       NA       NA       NA       NA
 ```
-Sume la tendencia con la estacionalidad,
+Sume la tendencia con la estacionalidad
 ```markdown
 AditivoModel1= (TendenciaEstimadaAditivo + EstacionalidadEstimadaAditiva)
   print(AditivoModel1)
@@ -222,7 +218,7 @@ Descomponer la serie de tiempo en el modelo máltiplicativo y realice gráfica.
 eg.decom = decompose(X, type = "mult")
 plot(eg.decom)
 ```
-CUal es la estimación para la Tendencia estimada
+¿Cuál es la estimación para la Tendencia estimada?
 
 ```markdown
 TendenciaEstimadaMultiplicativo= eg.decom$trend
@@ -236,7 +232,7 @@ Jan      Feb      Mar      Apr      May      Jun      Jul      Aug
 1982 124.6625 127.5964 131.1420 134.9367
 1983       NA       NA       NA       NA
 ```
-CUal es la estacionalidad (periodicidad) estimada:
+¿Cuál es la estacionalidad (periodicidad) estimada?
 ```markdown
 EstacionalidadEstimadaMultipicativo= eg.decom$seasonal
   print(EstacionalidadEstimadaMultipicativo)
@@ -249,7 +245,7 @@ EstacionalidadEstimadaMultipicativo= eg.decom$seasonal
 1982 1.1324826 1.0220217 0.7771652 0.6572030 0.7486066
 1983 1.1324826 1.0220217 0.7771652 0.6572030 0.7486066
 ```
-Cuál es el error estimado?:
+¿Cuál es el error estimado?:
 ```markdown
 ErrorEstimadoMultiplicativo= eg.decom$random
   print(ErrorEstimadoMultiplicativo)
@@ -292,87 +288,11 @@ Realiza el modelo de Holt Winters usando la el modelo multiplicativo
 HoltWinters= HoltWinters(X, seasonal="mult")
   plot(HoltWinters)
 ```
-COn el mismo modelo obten una predicción de 5 años posteriores a tus datos
+Con el mismo modelo obten una predicción de 5 años posteriores a tus datos
 ```markdown
 HoltWintersPredict=predict(HoltWinters,n.ahead=5)
   ts.plot(X, HoltWintersPredict, lty=1:2)
 ```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-```markdown
-
-```
-
 # Header 1
 ## Header 2
 ### Header 3
