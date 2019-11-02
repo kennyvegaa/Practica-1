@@ -1,6 +1,7 @@
 ## Ejercicio 1
 <p> Noria Montes Itzel </p>
 <p> Vega Alba Mónica Kendra </p)
+<p> Equipo 3 </p>
 
 Primero cargamos la siguiente paqueteria:
 
@@ -122,8 +123,9 @@ plot(decompose(X))
 ```markdown
 boxplot(X, main="Diagrama de cajas", col= "mediumspringgreen")
 ```
+![3](https://user-images.githubusercontent.com/57273828/68063871-43148880-fcda-11e9-8373-ca2a4901ef2d.png)
 
-es anual o menos de dos años de información
+<p> es anual o menos de dos años de información </p>
 MesesOutlier=c("anual")
 ```markdown
 MesesOutlier= c("anual")
