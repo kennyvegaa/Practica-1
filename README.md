@@ -125,7 +125,7 @@ boxplot(X, main="Diagrama de cajas", col= "mediumspringgreen")
 ```
 ![3](https://user-images.githubusercontent.com/57273828/68063871-43148880-fcda-11e9-8373-ca2a4901ef2d.png)
 
-<p> es anual o menos de dos años de información </p>
+es anual o menos de dos años de información
 MesesOutlier=c("anual")
 ```markdown
 MesesOutlier= c("anual")
@@ -141,6 +141,8 @@ Realiza el correlograma de tu serie de tiempo
 ```markdown
 acf(X, main= "Correlograma de EG")
 ```
+![4](https://user-images.githubusercontent.com/57273828/68063927-c7ffa200-fcda-11e9-916b-88f1a9a58708.png)
+
 ¿Del correlograma anterior pudes asumir que las observaciones son correlacionadas entre si con un 95% de confianza?
 ```markdown
 Correlacion= TRUE
