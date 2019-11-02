@@ -1,7 +1,7 @@
 ## Ejercicio 1
-<p> Noria Montes Itzel </p>
-<p> Vega Alba Mónica Kendra </p)
-<p> Equipo 3 </p>
+Noria Montes Itzel 
+Vega Alba Mónica Kendra 
+Equipo 3 
 
 Primero cargamos la siguiente paqueteria:
 
@@ -118,7 +118,7 @@ plot(decompose(X))
 ```
 ![2](https://user-images.githubusercontent.com/57273828/68063818-9df9b000-fcd9-11e9-874b-b9d00c2c99a7.png)
 
-<p> Sí tu base abarca, realiza una gráfica de caja para cada mes identificando valores atípicos, si sólo tiene un registro por año realiza una gráfica de caja con todos los datos identificando outlier (atípicos) y sí tu base tiene menos de dos años de información realiza una gráfica de caja con todos los datos identificando outlier (atípicos). </p>
+Sí tu base abarca, realiza una gráfica de caja para cada mes identificando valores atípicos, si sólo tiene un registro por año realiza una gráfica de caja con todos los datos identificando outlier (atípicos) y sí tu base tiene menos de dos años de información realiza una gráfica de caja con todos los datos identificando outlier (atípicos).
 
 ```markdown
 boxplot(X, main="Diagrama de cajas", col= "mediumspringgreen")
