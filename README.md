@@ -1,7 +1,5 @@
 ## Ejercicio 1
-Noria Montes Itzel 
-Vega Alba Mónica Kendra 
-Equipo 3 
+*Equipo 3: Noria Montes Itzel y Vega Alba Mónica Kendra* 
 
 Primero cargamos la siguiente paqueteria:
 
@@ -308,5 +306,7 @@ Realiza el modelo de Holt Winters usando la el modelo multiplicativo
 Con el mismo modelo obten una predicción de 5 años posteriores a tus datos
 ```markdown
 HoltWintersPredict=predict(HoltWinters,n.ahead=5)
-  ts.plot(X, HoltWintersPredict, lty=1:2)
+  ts.plot(X, HoltWintersPredict, lty=1:2, col=c("turquoise4"))
 ```
+![10](https://user-images.githubusercontent.com/57273828/68064278-2b8bce80-fcdf-11e9-9371-55b1f0aa7c57.png)
+
