@@ -1,6 +1,6 @@
 ## Ejercicio 1
-*Noria Montes Itzel
-*Vega Alba Mónica Kendra
+<p> Noria Montes Itzel </p>
+<p> Vega Alba Mónica Kendra </p)
 
 Primero cargamos la siguiente paqueteria:
 
