@@ -214,6 +214,8 @@ Gráfique la serie de tiempo y sobre la misma gráfica imprima la suma de tenden
 ```markdown
 plot(X,AditivoModel1, col=c("turquoise4","limegreen"))
 ```
+![6](https://user-images.githubusercontent.com/57273828/68064039-106b8f80-fcdc-11e9-8b67-390098a6f07e.png)
+
 Los Valores son parecidos: TRUE (Sí), FALSE (No)
 ```markdown
 ParecidosAditivo="TRUE"
