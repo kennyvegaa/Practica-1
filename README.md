@@ -90,9 +90,7 @@ Gráfica tu serie de tiempo, recuerda poner, título principal, y a los ejes.
 plot(EG, xlab = "Tiempo", ylab = "Unidades", lty = c(1,2),
      main ="Ventas anuales de ciertos equipos grandes",cex.main=1.5, col= "darkturquoise")
 ```
-![i need a screenshot](https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104)
-![https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104].(src)
-<img src="https://github.com/kennyvegaa/Practica-1/issues/2#issuecomment-548981104" />
+![1](https://user-images.githubusercontent.com/57273828/68063751-16ac3c80-fcd9-11e9-9124-3d1d66015f5d.png)
 
 De la gráfica anterior observas, ¿Cuál es su tendencia?
 
