@@ -300,9 +300,11 @@ print(ParecidosMultiplicativo)
 ```
 Realiza el modelo de Holt Winters usando la el modelo multiplicativo
 ```markdown
-HoltWinters= HoltWinters(X, seasonal="mult")
-  plot(HoltWinters)
+ HoltWinters= HoltWinters(X, seasonal="mult")
+  plot(HoltWinters, col=c("turquoise4","limegreen"))
 ```
+![9](https://user-images.githubusercontent.com/57273828/68064247-d8b21700-fcde-11e9-8ce6-1d34e91a2ca5.png)
+
 Con el mismo modelo obten una predicción de 5 años posteriores a tus datos
 ```markdown
 HoltWintersPredict=predict(HoltWinters,n.ahead=5)
