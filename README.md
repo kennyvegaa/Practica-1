@@ -156,6 +156,8 @@ Descomponer la serie de tiempo en el modelo aditivo y realice gráfica.
 eg1.decom = decompose(X, type = "additive")
 plot(eg1.decom)
 ```
+![5](https://user-images.githubusercontent.com/57273828/68063995-74da1f00-fcdb-11e9-8f9c-a4d878f4f301.png)
+
 ¿Cuál es la estimación para la Tendencia estimada?
 ```markdown
 TendenciaEstimadaAditivo=  eg1.decom$trend
