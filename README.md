@@ -288,6 +288,7 @@ Gráfique la serie de tiempo y sobre la misma gráfica imprima la multiplicacion
 ```markdown
 plot(X,MultiplicativoModel1, col=c(("turquoise4","limegreen"))
 ```
+![8](https://user-images.githubusercontent.com/57273828/68064192-2aa66d00-fcde-11e9-83de-dcc43974522c.png)
 
 Los Valores son parecidos: TRUE (Sí), FALSE (No)
 ```markdown
