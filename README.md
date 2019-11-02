@@ -229,6 +229,8 @@ Descomponer la serie de tiempo en el modelo máltiplicativo y realice gráfica.
 eg.decom = decompose(X, type = "mult")
 plot(eg.decom)
 ```
+![7](https://user-images.githubusercontent.com/57273828/68064151-891f1b80-fcdd-11e9-8ff9-a68817d34d58.png)
+
 ¿Cuál es la estimación para la Tendencia estimada?
 
 ```markdown
